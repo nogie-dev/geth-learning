@@ -52,8 +52,8 @@ maxBlockSizeBufferZone = 1MB (miner/worker.go/L96)
 	
 	  ##### 1.4.3.1 applyTransaction
 	  - blob tx일 경우 사이드카 별도 처리
-	  - → core.ApplyTransaction() 호출
-	  - 이 안에서 EVM 실행이 일어남 (TODO: EVM 분석 주차)
+	  - → [[EVM Execution|core.ApplyTransaction()]] 호출
+	  - 이 안에서 EVM 실행이 일어남 → [[EVM Execution]] 참고
 	  - 실행 결과: receipt (가스 사용량, 로그, 성공/실패)
 	
 	  ##### 1.4.3.2 실행 후 처리

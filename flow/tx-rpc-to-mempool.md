@@ -13,8 +13,8 @@
 		- 역할: 노드별 gas 상한 지정 가능
 		
 		#### 1.1.2 SendTx (internal/eth/api_backend.go:L327)
-		- 역할: Backend 인터페이스를 통해 txpool 진입
-		- 왜 api.go 에서 인터페이스 처리로 설계하였는가 (ToDo)
+		- 역할: [[구현체 구조|Backend 인터페이스]]를 통해 txpool 진입
+		- 왜 api.go 에서 인터페이스 처리로 설계하였는가 → [[구현체 구조]] 참고
 		- Track()
 			- txPool에 들어가지 못한 tx의 경우 tracking 하다 pool에 자리가 생기면 들어감
 			 * blob tx의 경우 용량 문제로 제외됨

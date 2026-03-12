@@ -123,10 +123,10 @@
      - 기타 에러: 상태 롤백 + 가스 전부 소진
 
   ### 2.7 다음 추적: evm.Run() → Interpreter 루프
-  - Call/Create 모두 최종적으로 interpreter에서 바이트코드 실행
+  - Call/Create 모두 최종적으로 interpreter에서 바이트코드 실행 → [[evm|EVM Interpreter 구조]] 참고
 
 ## 3.  Run (core/vm/interpreter.go:L428)
-- 역할: 
+- 역할:
 
 	### 3.1 depth check
 	- 함수 진입 시 1 카운팅 (최대 1024), defer로 종료 시 -1 카운팅

@@ -1,6 +1,6 @@
 # geth 핵심 Q&A (복습용)
 
-## TX: RPC → TxPool
+## TX: RPC → TxPool ([[tx-rpc-to-mempool|흐름 분석]])
 
 **Q: checkTxFee의 역할은? 보안 목적인가?**
 A: 노드별 가스 상한과 tx fee를 비교하는 것. 보안이 아니라 UX 보호(사용자 실수 방지). 비정상적으로 높은 가스비를 설정한 tx를 걸러냄.
@@ -16,7 +16,7 @@ A:
 
 ---
 
-## TX: TxPool → Block
+## TX: TxPool → Block ([[tx-txpool-to-block|흐름 분석]])
 
 **Q: prio와 normal을 나누는 기준은?**
 A: 로컬 tx 여부가 아니라 miner.prio 주소 리스트에 등록된 주소인지. 로컬에서 보내도 리스트에 없으면 normal.
@@ -39,7 +39,7 @@ A:
 
 ---
 
-## EVM Execution
+## EVM Execution ([[EVM Execution|흐름 분석]])
 
 **Q: intrinsic gas와 EIP-7623 floorDataGas는 왜 별도로 존재?**
 A: intrinsic gas는 기존 가스 계산. floorDataGas는 calldata 전용 하한선. 목적이 다름. floorDataGas는 calldata 대량 사용을 억제해서 blob 사용을 유도하기 위한 별도 규칙.
